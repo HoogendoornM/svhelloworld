@@ -1,11 +1,15 @@
 @extends('layouts.master')
-@section('title', 'Leden')
+@section('title', __('Leden'))
 
 @section('content')
-    <p>Er zijn momenteel {{ count($members) }} leden.</p>
+    <p>{{ __('Er zijn momenteel') }} {{ count($members) }} {{  __('leden') }}.</p>
 
     <div class="table-responsive">
-        <table id="user-members-table" class="table table-bordered table-striped table-hover">
+            @if (App::isLocale('nl'))
+                <table id="user-members-table" class="table table-bordered table-striped table-hover">
+                    @else
+                        <table id="user-members-table-en" class="table table-bordered table-striped table-hover">
+                            @endif
             <thead>
                 <tr>
                     <th></th>

@@ -58,4 +58,19 @@ $(document).ready( function () {
         "order": [[ 1, "asc" ]]
     });
 
+    $('#activities-entry-index-table-en').DataTable({
+        "pageLength": 50,
+        "order": [[ 1, "desc" ]]
+    });
+
+    $('#user-index-table-en').DataTable({
+        "pageLength": 50,
+        "order": [[ 1, "asc" ]]
+    });
+
+    $('#user-members-table-en').DataTable({
+        "pageLength": 50,
+        "order": [[ 1, "asc" ]]
+    });
+
 } );

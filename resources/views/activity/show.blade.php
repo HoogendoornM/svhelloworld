@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Details activiteit')
+@section('title', __('Details activiteit'))
 
 @section('content')
     <div class="row">
@@ -12,71 +12,71 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th colspan="2">Details over de activiteit</th>
+                            <th colspan="2">{{ __("Details over de activiteit") }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Datum en tijd</td>
+                            <td>{{ __("Datum en tijd") }}</td>
                             <td>
-                                @datetime($activity->starts_at) t/m @datetime($activity->ends_at)
+                                @datetime($activity->starts_at) {{ __("t/m") }} @datetime($activity->ends_at)
                             </td>
                         </tr>
                         <tr>
-                            <td>Aanmeldperiode</td>
+                            <td>{{ __("Aanmeldperiode") }}</td>
                             <td>
-                                @date($activity->available_from) t/m @date($activity->available_to)
+                                @date($activity->available_from) {{ __("t/m") }} @date($activity->available_to)
                             </td>
                         </tr>
                         <tr>
-                            <td>ITP-waarde</td>
+                            <td>{{ __("ITP-waarde") }}</td>
                             <td>
                                 @if(isset($activity->itp_value))
                                     {{ $activity->itp_value }}
                                 @else
-                                    Onbekend
+                                    {{ __("Onbekend") }}
                                 @endif
                             </td>
                         </tr>
                         @if(isset($activity->member_limit))
                             <tr>
-                                <td>Totaal aantal plekken</td>
+                                <td>{{ __("Totaal aantal plekken") }}</td>
                                 <td>
                                     {{ $activity->member_limit }}
                                 </td>
                             </tr>
                             <tr>
-                                <td>Aantal plekken nog beschikbaar</td>
+                                <td>{{ __("Aantal plekken nog beschikbaar") }}</td>
                                 <td>
                                     {{ max($activity->member_limit - $activity->entries()->count(), 0) }}
                                 </td>
                             </tr>
                         @endif
                         <tr>
-                            <td>Prijs</td>
+                            <td>{{ __("Prijs") }}</td>
                             @if($activity_price)
                                 @if($activity_price->amount > 0)
                                     <td>&euro; {{ $activity_price->amount }}</td>
                                 @else
-                                    <td>Gratis</td>
+                                    <td>{{ __("Gratis") }}</td>
                                 @endif
                             @else
-                                <td>Onbekend</td>
+                                <td>{{ __("Onbekend") }}</td>
                             @endif
                         </tr>
                         @if($activity_entry)
                             <tr>
-                                <td>Status aanmelding</td>
+                                <td>{{ __("Status aanmelding") }}</td>
                                 <td>
                                     @if ($activity_entry->confirmed())
-                                        <span class="label label-success">Aangemeld</span>
+                                        <span class="label label-success">{{ __("Aangemeld") }}</span>
                                     @else
-                                        <span class="label label-info">Nog niet bevestigd</span>
+                                        <span class="label label-info">{{ __("Nog niet bevestigd") }}</span>
                                     @endif
                                 </td>
                             </tr>
                             <tr>
-                                <td>Ingeschreven op</td>
+                                <td>{{ __("Ingeschreven op") }}</td>
                                 <td>@datetime($activity_entry->created_at)</td>
                             </tr>
                         @endif
@@ -84,14 +84,14 @@
                 </table>
             </div>
 
-            <a href="{{ route('activity.index') }}" class="btn btn-default">Terug naar overzicht</a>
+            <a href="{{ route('activity.index') }}" class="btn btn-default">{{ __("Terug naar overzicht") }}</a>
             @if($activity_entry)
-                <a href="{{ route('activity_entry.show', $activity_entry->id) }}" class="btn btn-primary">Bekijk aanmelding</a>
+                <a href="{{ route('activity_entry.show', $activity_entry->id) }}" class="btn btn-primary">{{ __("Bekijk aanmelding") }}</a>
             @else
                 @if(!isset($activity->member_limit) || $activity->entries()->count() < $activity->member_limit)
-                    <a href="{{ route('activity_entry.create', $activity->id) }}" class="btn btn-primary">Aanmelden</a>
+                    <a href="{{ route('activity_entry.create', $activity->id) }}" class="btn btn-primary">{{ __("Aanmelden") }}</a>
                 @else
-                    <a disabled class="btn btn-danger">Aanmelden (vol)</a>
+                    <a disabled class="btn btn-danger">{{ __("Aanmelden (vol)") }}</a>
                 @endif
             @endif
         </div>

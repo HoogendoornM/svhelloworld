@@ -83,7 +83,7 @@ class ActivityEntryController extends Controller
     public function store(Request $request, $id)
     {
         $messages = [
-            'accept.required' => 'Je dient akkoord te gaan met de voorwaarden.',
+            'accept.required' => __('Je dient akkoord te gaan met de voorwaarden.'),
             'notes.string' => 'Vul een geldige opmerking in.',
         ];
 
@@ -102,13 +102,13 @@ class ActivityEntryController extends Controller
 
         //Check if join date hasn't expired
         if(!($activity->available_from <= $today && $activity->available_to >= $today)) {
-            flash('Aanmeldperiode is verlopen.', 'info');
+            flash(__('Aanmeldperiode is verlopen.'), 'info');
             return redirect(route('activity.show', $activity->id));
         }
 
         //Check member limit
         if($activity->entries()->count() >= $activity->member_limit && $activity->member_limit != 0 && $activity->member_limit != null) {
-            flash('Het is niet meer mogelijk om je aan te melden voor deze acitviteit want, de activiteit heeft het maximum aantal deelnemers bereikt.', 'info');
+            flash(__('Het is niet meer mogelijk om je aan te melden voor deze acitviteit want, de activiteit heeft het maximum aantal deelnemers bereikt.'), 'info');
             return redirect(route('activity.show', $activity->id));
         }
 
@@ -119,7 +119,7 @@ class ActivityEntryController extends Controller
         ])->first();
 
         if ($activity_entry) {
-            flash('Je kunt je niet aanmelden voor deze activiteit, omdat je je al hebt aangemeld.', 'info');
+            flash(__('Je kunt je niet aanmelden voor deze activiteit, omdat je je al hebt aangemeld.'), 'info');
             return redirect(route('activity.show', $activity->id));
         }
 
@@ -129,7 +129,7 @@ class ActivityEntryController extends Controller
             ->first();
 
         if (! $activity_price) {
-            flash('Je kunt je niet aanmelden voor deze activiteit.', 'info');
+            flash(__('Je kunt je niet aanmelden voor deze activiteit'), 'info');
 
             return redirect(route('activity.show', $activity->id));
         }
@@ -143,13 +143,13 @@ class ActivityEntryController extends Controller
 
         // Check if the activity entry is created
         if (! $activity_entry) {
-            flash(sprintf('Aanmelden voor de activiteit \'%s\' is niet gelukt. Probeer het alstublieft opnieuw.', $activity->title), 'danger');
+            flash(sprintf('Registration failed \'%s\' please try again.', $activity->title), 'danger');
 
             return back()->withInput();
         }
 
         if ($activity_price->amount > 0) {
-            flash(sprintf('Je hebt je succesvol aangemeld voor de activiteit \'%s\', je ontvangt binnenkort een mail met betalingsinstructies.', $activity->title), 'success');
+            flash(sprintf(__('Je hebt je succesvol aangemeld voor de activiteit'). ' \'%s\', ' . __('je ontvangt binnenkort een mail met betalingsinstructies.'), $activity->title), 'success');
 
             // Fire 'UserAppliedForActivity' event
             event(new UserAppliedForActivity($activity_entry));
@@ -163,7 +163,7 @@ class ActivityEntryController extends Controller
         // Send notification to user
         $user->notify(new ActivityEntryConfirmed($activity_entry->id, $activity_entry->activity->title));
 
-        flash(sprintf('Je hebt je succesvol aangemeld voor de activiteit \'%s\'.', $activity->title), 'success');
+        flash(sprintf(__('Je hebt je succesvol aangemeld voor de activiteit'). ' \'%s\'.', $activity->title), 'success');
 
         return redirect(route('activity.show', $activity->id));
     }
@@ -205,7 +205,7 @@ class ActivityEntryController extends Controller
 
         $activity_entry->delete();
 
-        flash(sprintf('Je hebt je afgemeld voor \'%s\'.', $activity_entry->activity->title));
+        flash(sprintf(__('Je hebt je afgemeld voor'). ' \'%s\'.', $activity_entry->activity->title));
 
         return redirect(route('activity_entry.index'));
     }

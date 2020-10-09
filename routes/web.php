@@ -11,6 +11,12 @@
 |
 */
 
+
+Route::get('locale/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+
 // Protected group
 Route::group(['middleware' => ['auth', 'verified', 'account.profile.complete']], function () {
     Route::get('/', [
@@ -274,3 +280,4 @@ Route::group(['prefix' => 'account/wachtwoord', 'as' => 'account.password.'], fu
         'as' => 'set',
     ]);
 });
+
