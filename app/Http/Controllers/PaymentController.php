@@ -177,7 +177,6 @@ class PaymentController extends Controller
                 'paid_at' => strtotime($mollie_payment->createdAt),
             ]);
             event(new PaymentCompleted($payment));
-            ;
 
             flash('Bedankt! Je betaling is succesvol verwerkt.', 'success');
 
