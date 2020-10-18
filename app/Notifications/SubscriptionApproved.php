@@ -55,14 +55,14 @@ class SubscriptionApproved extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Je inschrijving is goedgekeurd!')
-            ->line(sprintf('Goed nieuws! Je inschrijving voor periode \'%s\' is goedgekeurd.', $this->period_name))
+            ->subject(__('Je inschrijving is goedgekeurd!'))
+            ->line(sprintf(__('Goed nieuws! Je inschrijving voor periode').' \'%s\' '. __('is goedgekeurd.'), $this->period_name))
             ->line([
-                'Over enkele momenten ontvang je van ons een e-mail met de melding dat er een betaling voor je klaarstaat.',
-                'Dit is de betaling voor de contributie van deze periode.',
-                'Wanneer je de betaling hebt afgerond zal je inschrijving definitief worden gemaakt.',
+                __('Over enkele momenten ontvang je van ons een e-mail met de melding dat er een betaling voor je klaarstaat.'),
+                __('Dit is de betaling voor de contributie van deze periode.'),
+                __('Wanneer je de betaling hebt afgerond zal je inschrijving definitief worden gemaakt.'),
             ])
-            ->action('Bekijk inschrijving', route('subscription.show', $this->subscription_id))
-            ->line('Bedankt voor je inschrijving!');
+            ->action(__('Bekijk inschrijving'), route('subscription.show', $this->subscription_id))
+            ->line(__('Bedankt voor je inschrijving!'));
     }
 }

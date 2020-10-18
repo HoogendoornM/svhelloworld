@@ -127,7 +127,7 @@ class EmailController extends Controller
 
         // Check if the e-mail is already verified
         if ($user->verified) {
-            flash('Je e-mail is al geverifieerd.', 'info');
+            flash(__('Het e-mailadres is al geverifieerd.'), 'info');
 
             return redirect(route('account.email.verificate.resend'));
         }
@@ -140,7 +140,7 @@ class EmailController extends Controller
         // Send email verification link
         UserVerification::send($user, 'Verifieer je e-mailadres');
 
-        flash('Er is opnieuw een e-mail gestuurd met een link om je e-mailadres te valideren.', 'success');
+        flash(__('Er is opnieuw een e-mail gestuurd met een link om je e-mailadres te valideren.'), 'success');
 
         return redirect(route('account.email.verificate.resend'));
     }
@@ -160,17 +160,17 @@ class EmailController extends Controller
         try {
             $user = UserVerification::process($request->input('email'), $token, $this->userTable());
 
-            flash('Bedankt, je e-mailadres is nu geverifieerd.', 'success');
+            flash(__('Bedankt, je e-mailadres is nu geverifieerd.'), 'success');
         } catch (UserNotFoundException $e) {
-            flash('Het e-mailadres kon niet worden geverifieerd omdat de gebruiker niet werd gevonden.', 'error');
+            flash(__('Het e-mailadres kon niet worden geverifieerd omdat de gebruiker niet werd gevonden.'), 'error');
 
             return redirect($this->redirectIfVerificationFails());
         } catch (UserIsVerifiedException $e) {
-            flash('Het e-mailadres is al geverifieerd.', 'info');
+            flash(__('Het e-mailadres is al geverifieerd.'), 'info');
 
             return redirect($this->redirectIfVerified());
         } catch (TokenMismatchException $e) {
-            flash('Het e-mailadres kon niet worden geverifieerd.', 'danger');
+            flash(__('Het e-mailadres kon niet worden geverifieerd.'), 'danger');
 
             return redirect($this->redirectIfVerificationFails());
         }

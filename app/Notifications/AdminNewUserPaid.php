@@ -46,11 +46,11 @@ class AdminNewUserPaid extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('Een nieuw lid heeft zijn contributie betaald')
-                    ->line('Naam: ' . $this->first_name . ' ' . $this->name_prefix . ' ' . $this->last_name)
-                    ->line('Telefoonnummer: ' . $this->phone_number)
+                    ->line(__('Een nieuw lid heeft zijn contributie betaald'))
+                    ->line(__('Naam').': ' . $this->first_name . ' ' . $this->name_prefix . ' ' . $this->last_name)
+                    ->line(__('Telefoonnummer').': ' . $this->phone_number)
                     ->line('Email: ' . $this->email)
-                    ->action('Gebruikers beheren', url('http://mijn.svhelloworld.nl/gebruikers'));
+                    ->action(__('Gebruikers beheren'), url('http://mijn.svhelloworld.nl/gebruikers'));
     }
 
     /**

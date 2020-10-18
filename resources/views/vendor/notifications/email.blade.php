@@ -85,9 +85,9 @@ $style = [
                                         <!-- Greeting -->
                                         <h1 style="{{ $style['header-1'] }}">
                                             @if ($level == 'error')
-                                                Oeps!
+                                                {{ __('Oeps!') }}
                                             @else
-                                                Hoi!
+                                                {{ __('Hoi!') }}
                                             @endif
                                         </h1>
 
@@ -136,7 +136,7 @@ $style = [
 
                                         <!-- Salutation -->
                                         <p style="{{ $style['paragraph'] }}">
-                                            Met vriendelijke groet,<br>{{ config('app.name') }}
+                                            {{ __('Met vriendelijke groet,') }}<br>{{ config('app.name') }}
                                         </p>
 
                                         <!-- Sub Copy -->
@@ -145,8 +145,8 @@ $style = [
                                                 <tr>
                                                     <td style="{{ $fontFamily }}">
                                                         <p style="{{ $style['paragraph-sub'] }}">
-                                                            Mocht het klikken op de "{{ $actionText }}" knop niet werken,
-                                                            kopieer en plak de URL hieronder in je webbrowser:
+                                                            {{ __('Mocht het klikken op de') }} "{{ $actionText }}" {{ __('knop niet werken,') }}
+                                                            {{ __('kopieer en plak de URL hieronder in je webbrowser:') }}
                                                         </p>
 
                                                         <p style="{{ $style['paragraph-sub'] }}">

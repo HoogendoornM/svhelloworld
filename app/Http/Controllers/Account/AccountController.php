@@ -19,7 +19,7 @@ class AccountController extends Controller
     {
         $user = Auth::user();
 
-        $userAccountType = $user->account_type == 'admin' ? 'Administrator' : 'Normale gebruiker';
+        $userAccountType = $user->account_type == 'admin' ? 'Administrator' : __('Normale gebruiker');
 
         return view('account.index', compact('user', 'userAccountType'));
     }

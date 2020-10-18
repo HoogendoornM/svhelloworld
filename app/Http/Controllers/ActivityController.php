@@ -150,7 +150,7 @@ class ActivityController extends Controller
             'amount' => request('event_price_non_member'),
         ]);
 
-        flash('Evenement toegevoegd!', 'success');
+        flash(__('Evenement toegevoegd!'), 'success');
 
         return redirect(route('activity.index'));
     }

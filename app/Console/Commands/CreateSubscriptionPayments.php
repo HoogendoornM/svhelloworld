@@ -60,7 +60,7 @@ class CreateSubscriptionPayments extends Command
             // Create the payment
             $payment = new Payment;
             $payment->amount = $subscription->contribution->amount;
-            $payment->description = sprintf('Contributie voor periode %s.', $subscription->contribution->period->name);
+            $payment->description = sprintf(__('Contributie voor periode').' %s.', $subscription->contribution->period->name);
 
             $payment->user()->associate($subscription->user);
             $payment->save();

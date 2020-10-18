@@ -47,14 +47,14 @@ class SubscriptionConfirmed extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Bedankt voor je inschrijving!')
+            ->subject(__('Bedankt voor je inschrijving!'))
             ->line([
-                'Bedankt voor je inschrijving, je bent nu succesvol ingeschreven als lid van Studievereniging "Hello World".',
-                'Als lid van de studievereniging zul je, gedurende de gehele periode waarin de contributie geldig is, ',
-                'korting krijgen op activiteiten die we gaan organiseren!',
+                __('Bedankt voor je inschrijving, je bent nu succesvol ingeschreven als lid van Studievereniging "Hello World".'),
+                __('Als lid van de studievereniging zul je, gedurende de gehele periode waarin de contributie geldig is, '),
+                __('korting krijgen op activiteiten die we gaan organiseren!'),
             ])
-            ->line('Klik op de knop hieronder om naar de details van je inschrijving te gaan:')
-            ->action('Bekijk inschrijving', route('subscription.show', $this->subscription_id))
-            ->line('Nogmaals bedankt voor je inschrijving, we zien je graag bij het eerstvolgende activiteit!');
+            ->line(__('Klik op de knop hieronder om naar de details van je inschrijving te gaan:'))
+            ->action(__('Bekijk inschrijving'), route('subscription.show', $this->subscription_id))
+            ->line(__('Nogmaals bedankt voor je inschrijving, we zien je graag bij het eerstvolgende activiteit!'));
     }
 }

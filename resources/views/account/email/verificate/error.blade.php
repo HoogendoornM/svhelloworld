@@ -1,2 +1,2 @@
 @extends('layouts.master')
-@section('title', 'E-mail kon niet worden geverifieerd')
+@section('title', __('E-mail kon niet worden geverifieerd'))

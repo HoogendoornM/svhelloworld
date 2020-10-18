@@ -47,10 +47,10 @@ class PaymentCreated extends Notification
         return (new MailMessage)
             ->subject(__('Er staat een nieuwe betaling voor je klaar'))
             ->line([
-                'Er staat een nieuwe betaling voor je klaar.',
-                'Druk op de knop hieronder om naar de details van de betaling te gaan:',
+                __('Er staat een nieuwe betaling voor je klaar').'.',
+                __('Druk op de knop hieronder om naar de details van de betaling te gaan:'),
             ])
-            ->action('Naar betaling', route('payment.show', $this->payment_id))
-            ->line('Als je de betaling reeds hebt voldaan kun je deze e-mail negeren.');
+            ->action(__('Naar betaling'), route('payment.show', $this->payment_id))
+            ->line(__('Als je de betaling reeds hebt voldaan kun je deze e-mail negeren.'));
     }
 }

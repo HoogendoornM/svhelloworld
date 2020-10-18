@@ -178,7 +178,7 @@ class PaymentController extends Controller
             ]);
             event(new PaymentCompleted($payment));
 
-            flash('Bedankt! Je betaling is succesvol verwerkt.', 'success');
+            flash(__('Bedankt! Je betaling is succesvol verwerkt.'), 'success');
 
             $admin = User::where('email', 'voorzitter@svhelloworld.nl')->first();
             $admin->notify(new AdminNewUserPaid($user['first_name'], $user['name_prefix'], $user['last_name'], $user['phone_number'], $user['email']));
@@ -186,7 +186,7 @@ class PaymentController extends Controller
             return redirect(route('payment.show', $id));
         }
 
-        flash('De betaling is mislukt, probeer het opnieuw of neem contact met ons op als het probleem aanhoudt.', 'warning');
+        flash(__('De betaling is mislukt, probeer het opnieuw of neem contact met ons op als het probleem aanhoudt.'), 'warning');
 
         return redirect(route('payment.show', $id));
     }

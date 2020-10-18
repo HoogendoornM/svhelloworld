@@ -1,18 +1,18 @@
 @extends('layouts.master')
-@section('title', 'Inschrijvingen beheren')
+@section('title', __('Inschrijvingen beheren'))
 
 @section('content')
     @if ($subscriptions->count())
-        <p>Dit is een overzicht van openstaande inschrijvingen.</p>
+        <p>{{ __('Dit is een overzicht van openstaande inschrijvingen.') }}</p>
 
         <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Naam</th>
-                        <th>Periode</th>
-                        <th>Contributie</th>
-                        <th>Acties</th>
+                        <th>{{ __('Naam') }}</th>
+                        <th>{{ __('Periode') }}</th>
+                        <th>{{ __('Contributie') }}</th>
+                        <th>{{ __('Acties') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@
                                 'route' => ['subscription.approve', $subscription->id],
                                 'style' => 'display:inline'
                             ]) !!}
-                                {!! Form::button('Goedkeuren', ['type' => 'submit', 'class' => 'btn btn-success btn-xs']) !!}
+                                {!! Form::button(__('Goedkeuren'), ['type' => 'submit', 'class' => 'btn btn-success btn-xs']) !!}
                             {!! Form::close() !!}
 
                             {!! Form::open([
@@ -40,7 +40,7 @@
                                 'route' => ['subscription.decline', $subscription->id],
                                 'style' => 'display:inline'
                             ]) !!}
-                                {!! Form::button('Weigeren', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
+                                {!! Form::button(__('Weigeren'), ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
                             {!! Form::close() !!}
                         </td>
                     </tr>
@@ -51,6 +51,6 @@
 
         <div class="pagination-wrapper">{!! $subscriptions->render() !!}</div>
     @else
-        <p class="alert alert-info">Er zijn op dit moment geen nieuwe inschrijvingen bekend.</p>
+        <p class="alert alert-info">{{ __('Er zijn op dit moment geen nieuwe inschrijvingen bekend.') }}</p>
     @endif
 @endsection

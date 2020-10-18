@@ -73,4 +73,13 @@ $(document).ready( function () {
         "order": [[ 1, "asc" ]]
     });
 
+    $('#activity-manage-table-en').DataTable({
+        "pageLength": 100,
+        "order": []
+    });
+
+    $('#activities-entries-table-en').DataTable({
+        "pageLength": 100
+    });
+
 } );
