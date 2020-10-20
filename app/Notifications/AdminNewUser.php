@@ -29,7 +29,7 @@ class AdminNewUser extends Notification
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
      * @return array
      */
     public function via($notifiable)
@@ -40,23 +40,23 @@ class AdminNewUser extends Notification
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('Een nieuw lid heeft zich aangemeld voor de studievereniging')
-                    ->line('Naam: ' . $this->first_name . ' ' . $this->name_prefix . ' ' . $this->last_name)
-                    ->line('Telefoonnummer: ' . $this->phone_number)
-                    ->line('Email: ' . $this->email)
-                    ->action('Gebruikers beheren', url('http://mijn.svhelloworld.nl/gebruikers'));
+            ->line(__('Een nieuw lid heeft zich aangemeld voor de studievereniging'))
+            ->line(__('Naam') . ': ' . $this->first_name . ' ' . $this->name_prefix . ' ' . $this->last_name)
+            ->line(__('Telefoonnummer') . ': ' . $this->phone_number)
+            ->line('Email: ' . $this->email)
+            ->action(__('Gebruikers beheren'), url('http://mijn.svhelloworld.nl/gebruikers'));
     }
 
     /**
      * Get the array representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
      * @return array
      */
     public function toArray($notifiable)

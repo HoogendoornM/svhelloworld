@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('back', route('user.show', $user->id))
-@section('title', 'Wijzig gebruiker')
+@section('title', __('Wijzig gebruiker'))
 
 @section('content')
     <div class="row">
@@ -14,7 +14,7 @@
             ]) !!}
 
             <div class="form-group {{ $errors->has('first_name') ? 'has-error' : ''}}">
-                {!! Form::label('first_name', 'Voornaam *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('first_name', __('Voornaam') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('first_name', '<p class="help-block">:message</p>') !!}
@@ -22,7 +22,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('name_prefix') ? 'has-error' : ''}}">
-                {!! Form::label('name_prefix', 'Tussenvoegsel *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('name_prefix', __('Tussenvoegsel'), ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('name_prefix', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('name_prefix', '<p class="help-block">:message</p>') !!}
@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('last_name') ? 'has-error' : ''}}">
-                {!! Form::label('last_name', 'Achternaam *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('last_name', __('Achternaam') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('last_name', '<p class="help-block">:message</p>') !!}
@@ -40,7 +40,7 @@
             <hr>
 
             <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
-                {!! Form::label('email', 'E-mailadres *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('email', __('E-mailadres') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::email('email', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
@@ -48,7 +48,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('phone_number') ? 'has-error' : ''}}">
-                {!! Form::label('phone_number', 'Telefoonnummer', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('phone_number', __('Telefoonnummer') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('phone_number', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('phone_number', '<p class="help-block">:message</p>') !!}
@@ -58,7 +58,7 @@
             <hr>
 
             <div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
-                {!! Form::label('address', 'Adres *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('address', __('Adres') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('address', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
@@ -66,7 +66,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('zip_code') ? 'has-error' : ''}}">
-                {!! Form::label('zip_code', 'Postcode *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('zip_code', __('Postcode') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('zip_code', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('zip_code', '<p class="help-block">:message</p>') !!}
@@ -74,7 +74,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('city') ? 'has-error' : ''}}">
-                {!! Form::label('city', 'Stad *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('city', __('Stad') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('city', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('city', '<p class="help-block">:message</p>') !!}
@@ -100,7 +100,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('user_category_alias') ? 'has-error' : ''}}">
-                {!! Form::label('user_category_alias', 'Gebruikerscategorie *', ['class' => 'col-sm-2 control-label']) !!}
+                {!! Form::label('user_category_alias', __('Gebruikerscategorie') .' *', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::select('user_category_alias', array_replace(['' => 'Geen gebruikerscategorie'], $user_categories_values), null, ['class' => 'form-control']) !!}
                     {!! $errors->first('user_category_alias', '<p class="help-block">:message</p>') !!}
@@ -109,8 +109,8 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-6">
-                    {!! Form::button('Gebruiker wijzigen', ['type' => 'submit', 'class' => 'btn btn-primary']) !!}
-                    <a href="{{ route('user.show', $user->id) }}" class="btn btn-danger">Annuleren</a>
+                    {!! Form::button(__('Gebruiker wijzigen'), ['type' => 'submit', 'class' => 'btn btn-primary']) !!}
+                    <a href="{{ route('user.show', $user->id) }}" class="btn btn-danger">{{ __('Annuleren') }}</a>
                 </div>
             </div>
 
@@ -121,7 +121,7 @@
 
 @section('sidebar')
     <section class="widget">
-        <h2 class="widget-title">Gebruiker beheren</h2>
+        <h2 class="widget-title">{{ __('Gebruiker beheren') }}</h2>
         <div class="widget-content">
             {!! Form::open([
                 'method'=>'PATCH',

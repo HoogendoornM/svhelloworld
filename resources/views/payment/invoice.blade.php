@@ -8,16 +8,16 @@
             <table>
                 <tr>
                     <td width="60%">
-                        <div class="hw-h3 margin-small">Factuur</div>
+                        <div class="hw-h3 margin-small">{{ __('Factuur') }}</div>
 
                         <div class="margin">
                             <table>
                                 <tr>
-                                    <td width="90">Factuurdatum:</td>
+                                    <td width="90">{{ __('Factuurdatum:') }}</td>
                                     <td>@date($payment->paid_at)</td>
                                 </tr>
                                 <tr>
-                                    <td width="90">Factuurnummer:</td>
+                                    <td width="90">{{ __('Factuurnummer:') }}</td>
                                     <td>{{ $payment->id }}</td>
                                 </tr>
                             </table>
@@ -56,10 +56,10 @@
             <table class="table table-striped" width="100%">
                 <thead>
                     <tr>
-                        <th width="40">Aantal</th>
-                        <th>Omschrijving</th>
-                        <th width="60" class="text-right">Tarief</th>
-                        <th width="60" class="text-right">Totaal</th>
+                        <th width="40">{{ __('Aantal') }}</th>
+                        <th>{{ __('Omschrijving') }}</th>
+                        <th width="60" class="text-right">{{ __('Tarief') }}</th>
+                        <th width="60" class="text-right">{{ __('Totaal') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -73,7 +73,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="2">&nbsp;</td>
-                        <td class="text-right"><strong>Totaalbedrag:</strong></td>
+                        <td class="text-right"><strong>{{ __('Totaalbedrag:') }}</strong></td>
                         <td class="text-right">&euro; {{ $payment->amount }}</td>
                     </tr>
                 </tfoot>
@@ -83,7 +83,7 @@
         <div class="hr"></div>
 
         <div class="padding">
-            Voor vragen kunt u contact opnemen per e-mail.
+            {{ __('Voor vragen kunt u contact opnemen per e-mail.') }}
         </div>
     </body>
 </html>

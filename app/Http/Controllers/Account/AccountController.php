@@ -19,7 +19,7 @@ class AccountController extends Controller
     {
         $user = Auth::user();
 
-        $userAccountType = $user->account_type == 'admin' ? 'Administrator' : 'Normale gebruiker';
+        $userAccountType = $user->account_type == 'admin' ? 'Administrator' : __('Normale gebruiker');
 
         return view('account.index', compact('user', 'userAccountType'));
     }
@@ -58,7 +58,7 @@ class AccountController extends Controller
         $user = Auth::user();
         $user->update($request->only('first_name', 'name_prefix', 'last_name', 'phone_number', 'address', 'zip_code', 'city'));
 
-        flash('Je gegevens zijn bijgewerkt!', 'success');
+        flash(__('Je gegevens zijn bijgewerkt!'), 'success');
 
         return redirect(route('account.index'));
     }

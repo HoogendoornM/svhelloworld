@@ -28,7 +28,7 @@ class PasswordController extends Controller
         // Validate current password
         $validator->after(function ($validator) use ($request, $user) {
             if (! Hash::check($request->input('password_current'), $user->password)) {
-                $validator->errors()->add('password_current', 'huidige wachtwoord is onjuist.');
+                $validator->errors()->add('password_current', __('huidige wachtwoord is onjuist.'));
             }
         });
 
@@ -46,7 +46,7 @@ class PasswordController extends Controller
         $user->password = bcrypt($credentials['password']);
         $user->save();
 
-        flash('Je wachtwoord is bijgewerkt.', 'success');
+        flash(__('Je wachtwoord is bijgewerkt.'), 'success');
 
         return redirect('account');
     }

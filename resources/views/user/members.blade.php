@@ -1,18 +1,22 @@
 @extends('layouts.master')
-@section('title', 'Leden')
+@section('title', __('Leden'))
 
 @section('content')
-    <p>Er zijn momenteel {{ count($members) }} leden.</p>
+    <p>{{ __('Er zijn momenteel') }} {{ count($members) }} {{  __('leden') }}.</p>
 
     <div class="table-responsive">
-        <table id="user-members-table" class="table table-bordered table-striped table-hover">
+            @if (App::isLocale('nl'))
+                <table id="user-members-table" class="table table-bordered table-striped table-hover">
+                    @else
+                        <table id="user-members-table-en" class="table table-bordered table-striped table-hover">
+                            @endif
             <thead>
                 <tr>
                     <th></th>
-                    <th>Naam</th>
-                    <th>E-mailadres</th>
-                    <th>Registratiedatum</th>
-                    <th>Acties</th>
+                    <th>{{ __('Naam') }}</th>
+                    <th>{{ __('E-mailadres') }}</th>
+                    <th>{{ __('Registratiedatum') }}</th>
+                    <th>{{ __('Acties') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,12 +27,12 @@
                     <td>{{ $member->email }}</td>
                     <td>{{ $member->created_at }}</td>
                     <td>
-                        <a href="{{ route('user.edit', $member->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Bewerk</a>
-                        <a href="{{ route('payment.user', $member->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-money"></i> Betalingen</a>
+                        <a href="{{ route('user.edit', $member->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> {{ __('Bewerk') }}</a>
+                        <a href="{{ route('payment.user', $member->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-money"></i> {{ __('Betalingen') }}</a>
                     </td>
                 </tr>
             @endforeach
             </tbody>
-        </table>
+                        </table></table>
     </div>
 @endsection

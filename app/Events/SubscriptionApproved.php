@@ -51,7 +51,7 @@ class SubscriptionApproved
         $this->subscription = $subscription;
         $this->user = $subscription->user;
         $this->amount = $subscription->contribution->amount;
-        $this->description = sprintf('Contributie voor periode %s.', $subscription->contribution->period->name);
+        $this->description = sprintf(__('Contributie voor periode').' %s.', $subscription->contribution->period->name);
     }
 
     /**

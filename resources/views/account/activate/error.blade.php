@@ -1,2 +1,2 @@
 @extends('layouts.master')
-@section('title', 'Je account kon niet worden geactiveerd')
+@section('title', __('Je account kon niet worden geactiveerd'))

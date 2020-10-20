@@ -47,7 +47,7 @@ class SubscriptionController extends Controller
         })->first();
 
         if (! $contribution) {
-            flash('Je kunt je niet inschrijven voor deze periode, mogelijk omdat je je al hebt ingeschreven.', 'info');
+            flash(__('Je kunt je niet inschrijven voor deze periode, mogelijk omdat je je al hebt ingeschreven.'), 'info');
 
             return redirect(route('subscription.index'));
         }
@@ -65,7 +65,7 @@ class SubscriptionController extends Controller
     public function store(Request $request, $slug)
     {
         $messages = [
-            'accept.required' => 'Je dient akkoord te gaan met de voorwaarden.',
+            'accept.required' => __('Je dient akkoord te gaan met de voorwaarden.'),
         ];
 
         $this->validate($request, [
@@ -81,7 +81,7 @@ class SubscriptionController extends Controller
         })->first();
 
         if (! $contribution) {
-            flash(sprintf('Je kunt je niet inschrijven voor deze periode, mogelijk omdat je je al hebt ingeschreven.', $contribution->period->name), 'info');
+            flash(sprintf(__('Je kunt je niet inschrijven voor deze periode, mogelijk omdat je je al hebt ingeschreven.'), $contribution->period->name), 'info');
 
             return redirect(route('subscription.index'));
         }
@@ -94,12 +94,12 @@ class SubscriptionController extends Controller
 
         // Check if the subscription is created
         if (! $subscription) {
-            flash(sprintf('Inschrijving voor periode %s is niet gelukt. Probeer het alstublieft opnieuw.', $contribution->period->name), 'danger');
+            flash(sprintf(__('Inschrijving voor periode %s is niet gelukt. Probeer het alstublieft opnieuw.'), $contribution->period->name), 'danger');
 
             return back()->withInput();
         }
 
-        flash(sprintf('Je hebt je succesvol ingeschreven als lid voor de periode %s. We zullen je op de hoogte brengen wanneer je inschrijving is goedgekeurd, en je de contributie kunt betalen.', $contribution->period->name), 'success');
+        flash(sprintf(__('Je hebt je succesvol ingeschreven als lid voor de periode %s. We zullen je op de hoogte brengen wanneer je inschrijving is goedgekeurd, en je de contributie kunt betalen.'), $contribution->period->name), 'success');
 
         return redirect(route('subscription.show', $subscription->id));
     }
@@ -183,7 +183,7 @@ class SubscriptionController extends Controller
         $subscription->approved_at = time();
 
         if ($subscription->touch()) {
-            flash('De inschrijving is succesvol goedgekeurd.', 'success');
+            flash(__('De inschrijving is succesvol goedgekeurd.'), 'success');
 
             // Fire 'SubscriptionApproved' event
             event(new SubscriptionApproved($subscription));
@@ -210,12 +210,12 @@ class SubscriptionController extends Controller
         $subscription->declined_at = time();
 
         if ($subscription->touch()) {
-            flash('De inschrijving is succesvol geweigerd.', 'success');
+            flash(__('De inschrijving is succesvol geweigerd.'), 'success');
 
             return redirect(route('subscription.manage'));
         }
 
-        flash('De inschrijving kon niet worden geweigerd.', 'danger');
+        flash(__('De inschrijving kon niet worden geweigerd.'), 'danger');
 
         return redirect(route('subscription.manage'));
     }

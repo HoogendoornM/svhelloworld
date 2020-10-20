@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Oeps, er is iets misgegaan.</title>
+        <title>{{ __('Oeps, er is iets misgegaan.') }}</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Oeps, er is iets misgegaan.</div>
+                <div class="title">{{ __('Oeps, er is iets misgegaan.') }}</div>
                 @unless(empty($sentryID))
                     <!-- Sentry JS SDK 2.1.+ required -->
                     <script src="https://cdn.ravenjs.com/3.18.1/raven.min.js"></script>

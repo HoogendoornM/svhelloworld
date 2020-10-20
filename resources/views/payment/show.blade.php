@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('back', route('payment.index'))
-@section('title', 'Details betaling')
+@section('title', __('Details betaling'))
 
 @section('content')
     <div class="row">
@@ -10,25 +10,25 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th colspan="2">Gegevens</th>
+                            <th colspan="2">{{ __('Gegevens') }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Volgnummer</td>
+                            <td>{{ __('Volgnummer') }}</td>
                             <td>{{ $payment->id }}</td>
                         </tr>
                         <tr>
-                            <td>Bedrag</td>
+                            <td>{{ __('Bedrag') }}</td>
                             <td>&euro; {{ $payment->amount }}</td>
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td>{!! $payment->paid() ? '<span class="label label-success">Betaald</a>' : '<span class="label label-warning">Nog niet betaald</span>' !!}</td>
+                            <td>{!! $payment->paid() ? '<span class="label label-success">'.__('Betaald').'</span>' : '<span class="label label-warning">'.__('Nog niet betaald').' </span>' !!}</td>
                         </tr>
                         @if ($payment->paid())
                             <tr>
-                                <td>Betaald op</td>
+                                <td>{{ __('Betaald op') }}</td>
                                 <td>@datetime($payment->paid_at)</td>
                             </tr>
                         @endif
@@ -37,11 +37,11 @@
             </div>
 
             @if (! $payment->paid())
-                <a href="{{ route('payment.pay', $payment->id) }}" class="btn btn-primary">Betalen</a>
-                <a href="{{ route('payment.index') }}" class="btn btn-danger">Annuleren</a>
+                <a href="{{ route('payment.pay', $payment->id) }}" class="btn btn-primary">{{ __('Betalen') }}</a>
+                <a href="{{ route('payment.index') }}" class="btn btn-danger">{{ __('Annuleren') }}</a>
             @else
-                <a href="{{ route('payment.index') }}" class="btn btn-primary">Terug naar het overzicht</a>
-                <a href="{{ route('payment.invoice', $payment->id) }}" class="btn btn-primary">Factuur downloaden</a>
+                <a href="{{ route('payment.index') }}" class="btn btn-primary">{{ __('Terug naar overzicht') }}</a>
+                <a href="{{ route('payment.invoice', $payment->id) }}" class="btn btn-primary">{{ __('Factuur downloaden') }}</a>
             @endif
         </div>
     </div>

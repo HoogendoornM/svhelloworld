@@ -27,6 +27,21 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::firstOrCreate([
+            'first_name' => 'Voorzitter',
+            'last_name' => 'Admin',
+            'email' => 'voorzitter@svhelloworld.nl',
+            'password' => bcrypt('Voorzitter123'),
+            'account_type' => 'admin',
+            'activated' => true,
+            'verified' => true,
+            'address' => 'Voorbeeldstraat 123',
+            'zip_code' => '1234 AB',
+            'city' => 'Voorbeeldstad',
+            'user_category_alias' => 'lid'
+        ]);
+
+
+        User::firstOrCreate([
             'first_name' => 'Voorbeeld',
             'last_name' => 'Gebruiker',
             'email' => 'gebruiker@hz.nl',

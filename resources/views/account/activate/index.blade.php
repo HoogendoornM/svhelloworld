@@ -1,2 +1,2 @@
 @extends('layouts.master')
-@section('title', 'Account activeren')
+@section('title', __('Account activeren'))

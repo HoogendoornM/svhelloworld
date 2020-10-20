@@ -55,12 +55,12 @@ class ActivityEntryConfirmed extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject(sprintf('Aanmelding voor \'%s\' succesvol', $this->activity_title))
+            ->subject(sprintf(__('Aanmelding voor \'%s\' succesvol'), $this->activity_title))
             ->line([
-                sprintf('Bedankt voor je aanmelding, je hebt je succesvol aangemeld voor \'%s\'.', $this->activity_title),
-                'Veel plezier bij deze activiteit!',
+                sprintf(__('Bedankt voor je aanmelding, je hebt je succesvol aangemeld voor \'%s\'.'), $this->activity_title),
+                __('Veel plezier bij deze activiteit!'),
             ])
-            ->line('Klik op de knop hieronder om naar de details van je aanmelding te gaan:')
-            ->action('Bekijk aanmelding', route('activity_entry.show', $this->activity_entry_id));
+            ->line(__('Klik op de knop hieronder om naar de details van je aanmelding te gaan:'))
+            ->action(__('Bekijk aanmelding'), route('activity_entry.show', $this->activity_entry_id));
     }
 }

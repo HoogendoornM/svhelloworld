@@ -69,9 +69,9 @@ class RegisterController extends Controller
         $this->guard()->login($user);
 
         UserVerification::generate($user);
-        UserVerification::send($user, 'Activeer je account');
+        UserVerification::send($user, __('Activeer je account'));
 
-        flash('Je account is succesvol aangemaakt! We hebben een activatielink naar je e-mailadres gestuurd. Het kan even duren voor je de activatielink ontvangt.', 'success');
+        flash(__('Je account is succesvol aangemaakt! We hebben een activatielink naar je e-mailadres gestuurd. Het kan even duren voor je de activatielink ontvangt.'), 'success');
 
         return $this->registered($request, $user) ?: redirect($this->redirectPath());
     }

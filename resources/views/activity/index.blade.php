@@ -1,21 +1,21 @@
 @extends('layouts.master')
-@section('title', 'Aanmelden activiteiten')
+@section('title', __('Aanmelden activiteiten'))
 
 @section('content')
     @if ($availableActivities->count() + $upcomingActivities->count())
-        <p>Dit is een overzicht van de activiteiten die georganiseerd worden door Studievereniging "Hello World".</p>
+        <p>{{ __("Dit is een overzicht van de activiteiten die georganiseerd worden door Studievereniging \"Hello World\".") }}</p>
 
         @if ($availableActivities->count())
-            <h3>Beschikbare activiteiten</h3>
+            <h3>{{ __("Beschikbare activiteiten") }}</h3>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover">
                     <thead>
                     <tr>
-                        <th>Naam</th>
-                        <th>Datum en tijd</th>
-                        <th>Aanmeldperiode</th>
-                        <th>ITP-waarde</th>
-                        <th>Acties</th>
+                        <th>{{ __("Naam") }}</th>
+                        <th>{{ __("Datum en tijd") }}</th>
+                        <th>{{ __("Aanmeldperiode") }}</th>
+                        <th>{{ __("ITP-waarde") }}</th>
+                        <th>{{ __("Acties") }}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,20 +25,20 @@
                                 <a href="{{ route('activity.show', $activity->id) }}">{{ $activity->title }}</a>
                             </td>
                             <td>
-                                @datetime($activity->starts_at) t/m @datetime($activity->ends_at)
+                                @datetime($activity->starts_at) {{ __("t/m") }} @datetime($activity->ends_at)
                             </td>
                             <td>
-                                @date($activity->available_from) t/m @date($activity->available_to)
+                                @date($activity->available_from) {{ __("t/m") }} @date($activity->available_to)
                             </td>
                             <td>
                                 @if(isset($activity->itp_value))
                                     {{ $activity->itp_value }}
                                 @else
-                                    Onbekend
+                                    {{ __("Onbekend") }}
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('activity.show', $activity->id) }}" class="btn btn-primary btn-xs">Bekijken</a>
+                                <a href="{{ route('activity.show', $activity->id) }}" class="btn btn-primary btn-xs">{{ __("Bekijken") }}</a>
                             </td>
                         </tr>
                     @endforeach
@@ -48,16 +48,16 @@
         @endif
 
         @if($upcomingActivities->count())
-            <h3>Toekomstige activiteiten</h3>
+            <h3>{{ __("Toekomstige activiteiten") }}</h3>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover">
                     <thead>
                     <tr>
-                        <th>Naam</th>
-                        <th>Datum en tijd</th>
-                        <th>Aanmeldperiode</th>
-                        <th>ITP-waarde</th>
-                        <th>Acties</th>
+                        <th>{{ __("Naam") }}</th>
+                        <th>{{ __("Datum en tijd") }}</th>
+                        <th>{{ __("Aanmeldperiode") }}</th>
+                        <th>{{ __("ITP-waarde") }}</th>
+                        <th>{{ __("Acties") }}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -67,20 +67,20 @@
                                 <a href="{{ route('activity.show', $activity->id) }}">{{ $activity->title }}</a>
                             </td>
                             <td>
-                                @datetime($activity->starts_at) t/m @datetime($activity->ends_at)
+                                @datetime($activity->starts_at) {{ __("t/m") }} @datetime($activity->ends_at)
                             </td>
                             <td>
-                                @date($activity->available_from) t/m @date($activity->available_to)
+                                @date($activity->available_from) {{ __("t/m") }} @date($activity->available_to)
                             </td>
                             <td>
                                 @if(isset($activity->itp_value))
                                     {{ $activity->itp_value }}
                                 @else
-                                    Onbekend
+                                    {{ __("Onbekend") }}
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('activity.show', $activity->id) }}" class="btn btn-primary btn-xs">Bekijken</a>
+                                <a href="{{ route('activity.show', $activity->id) }}" class="btn btn-primary btn-xs">{{ __("Bekijken") }}</a>
                             </td>
                         </tr>
                     @endforeach
@@ -90,16 +90,16 @@
         @endif
 
         @if($finishedActivities->count())
-            <h3>Afgelopen activiteiten</h3>
+            <h3>{{ __("Afgelopen activiteiten") }}</h3>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover">
                     <thead>
                     <tr>
-                        <th>Naam</th>
-                        <th>Datum en tijd</th>
-                        <th>Aanmeldperiode</th>
-                        <th>ITP-waarde</th>
-                        <th>Acties</th>
+                        <th>{{ __("Naam") }}</th>
+                        <th>{{ __("Datum en tijd") }}</th>
+                        <th>{{ __("Aanmeldperiode") }}</th>
+                        <th>{{ __("ITP-waarde") }}</th>
+                        <th>{{ __("Acties") }}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -109,20 +109,20 @@
                                 <a href="{{ route('activity.show', $activity->id) }}">{{ $activity->title }}</a>
                             </td>
                             <td>
-                                @datetime($activity->starts_at) t/m @datetime($activity->ends_at)
+                                @datetime($activity->starts_at) {{ __("t/m") }} @datetime($activity->ends_at)
                             </td>
                             <td>
-                                @date($activity->available_from) t/m @date($activity->available_to)
+                                @date($activity->available_from) {{ __("t/m") }} @date($activity->available_to)
                             </td>
                             <td>
                                 @if(isset($activity->itp_value))
                                     {{ $activity->itp_value }}
                                 @else
-                                    Onbekend
+                                    {{ __("Onbekend") }}
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('activity.show', $activity->id) }}" class="btn btn-primary btn-xs">Bekijken</a>
+                                <a href="{{ route('activity.show', $activity->id) }}" class="btn btn-primary btn-xs">{{ __("Bekijken") }}</a>
                             </td>
                         </tr>
                     @endforeach
@@ -131,6 +131,6 @@
             </div>
         @endif
     @else
-        <p class="alert alert-info">Op dit moment zijn er geen activiteiten onbeschikbaar, kijk op een later moment nog eens!</p>
+        <p class="alert alert-info">{{ __("Op dit moment zijn er geen activiteiten beschikbaar, kijk op een later moment nog eens!") }}</p>
     @endif
 @endsection

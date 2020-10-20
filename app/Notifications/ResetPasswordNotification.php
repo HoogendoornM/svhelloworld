@@ -44,12 +44,12 @@ class ResetPasswordNotification extends Notification
     public function toMail()
     {
         return (new MailMessage)
-            ->subject('Wachtwoord opnieuw instellen')
+            ->subject(__('Wachtwoord opnieuw instellen'))
             ->line([
-                'Je ontvangt deze mail omdat we een wachtwoord reset verzoek hebben gekregen voor jouw account.',
-                'Klik op de knop hieronder om je wachtwoord opnieuw in te stellen:',
+                __('Je ontvangt deze mail omdat we een wachtwoord reset verzoek hebben gekregen voor jouw account.'),
+                __('Klik op de knop hieronder om je wachtwoord opnieuw in te stellen:'),
             ])
-            ->action('Wachtwoord opnieuw instellen', route('account.password.show', $this->token))
-            ->line('Als je dit verzoek niet zelf hebt ingediend hoef je geen verdere actie te ondernemen.');
+            ->action(__('Wachtwoord opnieuw instellen'), route('account.password.show', $this->token))
+            ->line(__('Als je dit verzoek niet zelf hebt ingediend hoef je geen verdere actie te ondernemen.'));
     }
 }
