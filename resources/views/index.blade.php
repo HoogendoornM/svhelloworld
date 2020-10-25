@@ -4,8 +4,8 @@
 @section('content')
     <p>
         {{  __('Mijn SV "Hello World" is het portaal voor alle leden van Studievereniging "Hello World",
-        maar ook niet-leden mogen zich aanmelden voor activiteiten via dit portaal!
-        Je moet hiervoor wel student zijn aan de opleiding HBO-ICT van de HZ University of Applied Sciences.') }}
+maar ook niet-leden mogen zich aanmelden voor activiteiten via dit portaal!
+Je moet hiervoor wel student zijn aan de opleiding HBO-ICT van de HZ University of Applied Sciences.') }}
     </p>
 
     <p>

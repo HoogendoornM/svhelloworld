@@ -95,6 +95,15 @@
                     </div>
                 </div>
 
+                <hr>
+                <div class="form-group {{ $errors->has('shirt_size') ? 'has-error' : ''}}">
+                    {!! Form::label('shirt_size', __('Shirt maat'), ['class' => 'col-sm-4 control-label']) !!}
+                    <div class="col-sm-8">
+                        {!! Form::select('shirt_size', ['XS' => 'XS', 'S' => 'S', 'M' => 'M', 'L' => 'L' , 'XL' => 'XL'], null, ['class' => 'form-control']) !!}
+                        {!! $errors->first('shirt_size', '<p class="help-block">:message</p>') !!}
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-sm-offset-4 col-sm-8">
                         <button type="submit" class="btn btn-primary">{{ __('Registreren') }}</button>

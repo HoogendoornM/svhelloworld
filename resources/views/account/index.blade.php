@@ -31,6 +31,10 @@
                             <td>{{ __('Geregistreerd als') }}</td>
                             <td colspan="2">{{ $userAccountType }}</td>
                         </tr>
+                        <tr>
+                            <td>{{ __('Shirt maat') }}</td>
+                            <td>{{ $user->shirt_size }}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

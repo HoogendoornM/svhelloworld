@@ -69,6 +69,16 @@
                     </div>
                 </div>
 
+                <hr>
+
+                <div class="form-group {{ $errors->has('shirt_size') ? 'has-error' : ''}}">
+                    {!! Form::label('shirt_size', __('Shirt maat'), ['class' => 'col-sm-2 control-label']) !!}
+                    <div class="col-sm-6">
+                        {!! Form::select('shirt_size', ['XS' => 'XS', 'S' => 'S', 'M' => 'M', 'L' => 'L' , 'XL' => 'XL'], old('shirt_size') ? old('shirt_size') : $user->shirt_size, ['class' => 'form-control']) !!}
+                        {!! $errors->first('shirt_size', '<p class="help-block">:message</p>') !!}
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-6">
                         <a href="{{ route('account.index') }}" class="btn btn-danger">{{ __('Annuleren') }}</a>
