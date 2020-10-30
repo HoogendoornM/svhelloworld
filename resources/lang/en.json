@@ -35,29 +35,30 @@
     "Goedkeuren"            : "Approve",
     "Weigeren"              : "Refuse",
 
-    "Dit is een overzicht van openstaande inschrijvingen."      : "This is an overview of the open registrations",
-    "De inschrijving is succesvol goedgekeurd."                 : "The registration has been approved",
-    "Er zijn op dit moment geen nieuwe inschrijvingen bekend."  : "Currently there are no new registrations",
+    "Dit is een overzicht van openstaande inschrijvingen."      : "This is an overview of the open registrations.",
+    "De inschrijving is succesvol goedgekeurd."                 : "The registration has been approved.",
+    "Er zijn op dit moment geen nieuwe inschrijvingen bekend."  : "Currently there are no new registrations.",
 
     "Op deze pagina kun je je inschrijven als lid bij onze studievereniging voor de periode" : "On this page you can subscribe as a member for period",
     "De contributie voor deze periode bedraagt" : "The contribution for this period is",
     "Dit is een Early Bird-contributie. Als je je inschrijft voor": "This is an Early Bird contribution. If you subscribe before",
     "bedraagt de contributie slechts" : "the contribution will only be",
-    "Ik bevestig hiermee mijn inschrijving en ga akkoord met de betaling van de contributie." : "I hereby confirm my subscription and agree to the payment of the contribution",
+    "Ik bevestig hiermee mijn inschrijving en ga akkoord met de betaling van de contributie." : "I hereby confirm my subscription and agree to the payment of the contribution.",
 
     "Dit is een overzicht van alle activiteiten."   : "This is an overview of all activities",
-    "Er zijn op dit moment geen activiteiten."      : "There are currently no activities",
+    "Er zijn op dit moment geen activiteiten."      : "There are currently no activities.",
     "Dit is een overzicht van aanmeldingen voor"    : "This is an overview of users that signed up for",
 
     "Gebruiker toevoegen"   : "Create new user",
     "Gebruiker aanmaken"    : "Create new user",
+    "Gebruiker bijgewerkt."  : "User details updated.",
     "Inschrijven als lid"   : "Subscribe as member",
     "Normale gebruiker"     : "Normal user",
 
     "Betalingen gebruiker"  : "User payments",
     "Overzicht van de betalingen van gebruiker" : "Overview of payments for user",
-    "Deze gebruiker heeft op dit moment nog geen betalingen.": "This user currently has no payments",
-    "Bedankt! Je betaling is succesvol verwerkt." : "Thank you! your payment has been processed successfully",
+    "Deze gebruiker heeft op dit moment nog geen betalingen.": "This user currently has no payments.",
+    "Bedankt! Je betaling is succesvol verwerkt." : "Thank you! your payment has been processed successfully.",
     "De betaling is mislukt, probeer het opnieuw of neem contact met ons op als het probleem aanhoudt." : "The payment failed, please try again or contact us if the problem persists.",
 
     "Inschrijvingen beheren": "Manage subscriptions",
@@ -80,22 +81,22 @@
     "Maak een account aan!"         : "Create a new account",
     "Geregistreerd als"             : "Registered as",
 
-    "Hier kun je de algemene gegevens van je account wijzigen." : "Here you can change your account details",
+    "Hier kun je de algemene gegevens van je account wijzigen." : "Here you can change your account details.",
     "Wijzigen opslaan"              : "Save changes",
     "Je gegevens zijn bijgewerkt!"  : "Your account details are updated!",
-    "Hier kun je het wachtwoord van je account wijzigen." : "Here you can change your password",
+    "Hier kun je het wachtwoord van je account wijzigen." : "Here you can change your password.",
     "Huidig wachtwoord" : "Current password",
     "Nieuw wachtwoord"  : "New password",
     "Herhaal wachtwoord": "Repeat password",
     "Je wachtwoord is bijgewerkt."  : "Your password is updated.",
-    "huidige wachtwoord is onjuist.": "current password is incorrect",
+    "huidige wachtwoord is onjuist.": "current password is incorrect.",
 
     "Wachtwoord instellen" : "Set password",
     "Voer hieronder het gewenste nieuwe wachtwoord in." : "Set a new password below",
 
     "Nieuw e-mailadres"     : "New e-mail address",
     "Herhaal e-mailadres"   : "Repeat e-mail address",
-    "Na het wijzigen van je e-mailadres moet je opnieuw je e-mailadres valideren voor je je kunt aanmelden voor activiteiten.": "After changing your e-mail address you have to reverify your e-mail before you can register for activities",
+    "Na het wijzigen van je e-mailadres moet je opnieuw je e-mailadres valideren voor je je kunt aanmelden voor activiteiten.": "After changing your e-mail address you have to reverify your e-mail before you can register for activities.",
 
     "Inschrijvingen lidmaatschap"   : "Membership registration",
     "Bestaande inschrijvingen"      : "Existing memberships",
@@ -112,7 +113,7 @@
     "Details van de inschrijving"   : "Details of the membership registration",
     "Status inschrijving"           : "Registration status",
     "Contributie voor periode"      : "Contribution for period",
-    "Dit is een overzicht van de betalingen behorende bij deze inschrijving." : "This is an overview of the payments for this membership",
+    "Dit is een overzicht van de betalingen behorende bij deze inschrijving." : "This is an overview of the payments for this membership.",
 
     "Beschikbare activiteiten" : "Available activities",
     "Toekomstige activiteiten" : "Future activities",
@@ -125,13 +126,13 @@
     "Aangemeld op"      : "Applied on",
     "Bevestigd"         : "Approved",
     "Nog niet bevestigd": "Not yet confirmed",
-    "Op dit moment heb je je nog niet aangemeld voor een activiteit." : "At this moment you have not yet registered for an activity",
+    "Op dit moment heb je je nog niet aangemeld voor een activiteit." : "At this moment you have not yet registered for an activity.",
     "Dit is een overzicht van de activiteiten die georganiseerd worden door Studievereniging \"Hello World\"." : "This is an overview of the activities organized by Study Association \"Hello World\".",
     "Er zijn op dit moment geen nieuwe aanmeldingen bekend." : "There are currently no new registrations.",
 
     "Formulier om een evenement aan te maken."              : "Form to create a new activity.",
     "Let op: als het evenement gratis is vul dan 0.00 in."  : "Note: if the event is free enter 0.00.",
-    "Wil je geen deelnemer limiet instellen? Laat dan het veld \"Maximaal aantal leden\" leeg." : "If you do not want a participant limit leave the field empty",
+    "Wil je geen deelnemer limiet instellen? Laat dan het veld \"Maximaal aantal leden\" leeg." : "If you do not want a participant limit leave the field empty.",
 
     "Details activiteit": "Activity details",
     "Naam"              : "Name",
@@ -162,11 +163,11 @@
     "Opmerkingen"                   : "Notes",
     "Aanmelden voor activiteit"     : "Register for activity",
 
-    "Je dient akkoord te gaan met de voorwaarden." : "You must agree to the terms",
+    "Je dient akkoord te gaan met de voorwaarden." : "You must agree to the terms.",
     "De volgende fouten hebben zich voorgedaan:"   : "The following errors have occurred:",
     "De volgende fout heeft zich voorgedaan:"      : "The following error has occurred:",
-    "Aanmeldperiode is verlopen."                  : "Registration period has expired",
-    "Het is niet meer mogelijk om je aan te melden voor deze acitviteit want, de activiteit heeft het maximum aantal deelnemers bereikt." : "You can no longer register for this activity because the maximum participant amount has been reached",
+    "Aanmeldperiode is verlopen."                  : "Registration period has expired.",
+    "Het is niet meer mogelijk om je aan te melden voor deze acitviteit want, de activiteit heeft het maximum aantal deelnemers bereikt." : "You can no longer register for this activity because the maximum participant amount has been reached.",
     "Je kunt je niet aanmelden voor deze activiteit, omdat je je al hebt aangemeld." : "You can not register for this activity because you already signed up",
     "Je kunt je niet aanmelden voor deze activiteit"    : "You can not register for this activity",
     "Je hebt je succesvol aangemeld voor de activiteit" : "You successfully registered for this activity",
@@ -178,7 +179,7 @@
     "Omdat je lid bent kun je gratis deelnemen aan deze activiteit." : "Because you are a member this activity is free",
     "Controleer de gegevens in het onderstaande formulier goed! Gegevens kun je aanpassen bij" : "Please check the details in the form below! You can change your info at",
     "Ik bevestig hiermee mijn aanmelding en ga akkoord met de betaling van de kosten voor de bovenstaande activiteit." : "I hereby confirm my registration and agree to the payment of the costs for the above activity.",
-    "Ik bevestig hiermee mijn aanmelding voor de bovenstaande activiteit." : "I hereby confirm my registration for the activity above",
+    "Ik bevestig hiermee mijn aanmelding voor de bovenstaande activiteit." : "I hereby confirm my registration for the activity above.",
 
     "Prijs"             : "Price",
     "Gratis"            : "Free",
@@ -194,10 +195,10 @@
     "Details over de activiteit" : "Details about the activity",
     "Terug naar overzicht"       : "Back to overview",
 
-    "Dit is een overzicht van de betalingen behorende bij deze aanmelding." : "This is an overview of the payments for this activity",
-    "Er zijn geen betalingen gevonden behorende bij deze aanmelding."       : "There are no payments found for this registration",
+    "Dit is een overzicht van de betalingen behorende bij deze aanmelding." : "This is an overview of the payments for this activity.",
+    "Er zijn geen betalingen gevonden behorende bij deze aanmelding."       : "There are no payments found for this registration.",
 
-    "Je aanmelding voor dit activiteit is nog niet bevestigd."              : "Your registration for this activity has not yet been confirmed",
+    "Je aanmelding voor dit activiteit is nog niet bevestigd."              : "Your registration for this activity has not yet been confirmed.",
     "Dit zijn de aanmeldingsgegevens van je aanmelding voor het activiteit" : "Information about your registration for the activity",
 
     "Wachtwoord vergeten" : "Forgot password",
@@ -214,6 +215,7 @@
     "Adres"         : "Adress",
     "Postcode"      : "Zip code",
     "Stad"          : "City",
+    "Shirt maat"    : "Shirt size",
     "Wachtwoord herhalen"   : "Repeat password",
 
     "Beschrijving"          : "Description",
@@ -237,11 +239,11 @@
     "Totaalbedrag:"         : "Total:",
     "Factuur downloaden"    : "Download invoice",
 
-    "Dit is een overzicht van openstaande betalingen."      : "This is an overview of your outstanding payments",
-    "Je hebt op dit moment geen openstaande betalingen."    : "At this moment you have no outstanding payments",
-    "Dit is een overzicht van afgeronde betalingen."        : "This is an overview of your completed payments",
-    "Je hebt op dit moment nog geen afgeronde betalingen."  : "There are currently no completed payments",
-    "Er zijn geen betalingen gevonden behorende bij deze inschrijving." : "There are no payments found for this subscription",
+    "Dit is een overzicht van openstaande betalingen."      : "This is an overview of your outstanding payments.",
+    "Je hebt op dit moment geen openstaande betalingen."    : "At this moment you have no outstanding payments.",
+    "Dit is een overzicht van afgeronde betalingen."        : "This is an overview of your completed payments.",
+    "Je hebt op dit moment nog geen afgeronde betalingen."  : "There are currently no completed payments.",
+    "Er zijn geen betalingen gevonden behorende bij deze inschrijving." : "There are no payments found for this subscription.",
 
     "Account activeren" : "Activate account",
     "Klik hier om je account te activeren:" : "Click here to activate your account",
@@ -249,24 +251,22 @@
     "E-mail kon niet worden geverifieerd"   : "E-mail address could not be verified",
 
     "Account gedeactiveerd" : "Account inactive",
-    "Je kunt je account niet gebruiken omdat het account is gedeactiveerd. Neem contact op indien het account ten onrechte is gedeactiveerd." : "You can not use this account because it is deactivated. Please contact us if this has been done by accident",
+    "Je kunt je account niet gebruiken omdat het account is gedeactiveerd. Neem contact op indien het account ten onrechte is gedeactiveerd." : "You can not use this account because it is deactivated. Please contact us if this has been done by accident.",
 
     "De inschrijving is succesvol geweigerd."    : "The registration has been cancelled",
     "De inschrijving kon niet worden geweigerd." : "The registration can not be cancelled",
     "Aanmelding voor '%s' succesvol"         : "Registration for '%s' successful",
     "Bedankt voor je aanmelding, je hebt je succesvol aangemeld voor '%s'." : "Thank you for your registration, je have successfully signed up for '%s'.",
     "Veel plezier bij deze activiteit!" : "Have fun with this activity!",
-    "Klik op de knop hieronder om naar de details van je aanmelding te gaan:" : "Click on the button below to go to the details of the registration",
-
-
+    "Klik op de knop hieronder om naar de details van je aanmelding te gaan:" : "Click on the button below to go to the details of the registration:",
 
     "Hoi!"  : "Hi!",
     "Oeps!" : "Oops!",
     "Mocht het klikken op de" : "If clicking on the",
     "knop niet werken," : "button does not work,",
-    "kopieer en plak de URL hieronder in je webbrowser:" : "copy and paste the URL below in your webbrowser",
+    "kopieer en plak de URL hieronder in je webbrowser:" : "copy and paste the URL below in your webbrowser:",
     "Er staat een nieuwe betaling voor je klaar" : "A new payment is waiting for you",
-    "Druk op de knop hieronder om naar de details van de betaling te gaan:" : "Click on the button below to go to the payment details",
+    "Druk op de knop hieronder om naar de details van de betaling te gaan:" : "Click on the button below to go to the payment details:",
     "Naar betaling" : "To payment",
     "Als je de betaling reeds hebt voldaan kun je deze e-mail negeren." : "If you have already made the payment you can ignore this e-mail.",
 
@@ -276,9 +276,9 @@
     "Dit is een overzicht van de nieuwe periode's waarvoor je je kunt inschrijven als lid." : "This is an overview of the new periods for which you can register as a member.",
 
     "Als je je wachtwoord bent vergeten kun je hieronder je e-mailadres opgeven. Je zal dan een link toegestuurd krijgen waarmee je je wachtwoord opnieuw kan instellen." : "If you have forgotten your password, you can enter your email address below. You will then receive a link which you can use to reset your password.",
-    "Je ontvangt deze mail omdat we een wachtwoord reset verzoek hebben gekregen voor jouw account." : "You receive this e-mail because we received a password reset request for this account",
-    "Klik op de knop hieronder om je wachtwoord opnieuw in te stellen:" : "Click the button below to reset your password",
-    "Als je dit verzoek niet zelf hebt ingediend hoef je geen verdere actie te ondernemen." : "If you did not apply this request yourself you can ignore this message",
+    "Je ontvangt deze mail omdat we een wachtwoord reset verzoek hebben gekregen voor jouw account." : "You receive this e-mail because we received a password reset request for this account.",
+    "Klik op de knop hieronder om je wachtwoord opnieuw in te stellen:" : "Click the button below to reset your password:",
+    "Als je dit verzoek niet zelf hebt ingediend hoef je geen verdere actie te ondernemen." : "If you did not apply this request yourself you can ignore this message.",
 
     "Met een account kun je jezelf aanmelden voor activiteiten en je inschrijven als lid. Je hoeft geen lid te zijn van onze vereniging om je aan te kunnen melden voor activiteiten. Heb je al een account? Klik dan" : "With an account you can register yourself for activities and register as a member. You do not have to be a member of our association to register for activities. Do you already have an account? Then click",
     "Op dit moment zijn er geen activiteiten beschikbaar, kijk op een later moment nog eens!" : "Currently there are no activities available, check again later!",
@@ -314,7 +314,7 @@
     "Een nieuw lid heeft zich aangemeld voor de studievereniging" : "A new member has signed up for the study association",
 
     "Voor vragen kunt u contact opnemen per e-mail." : "For questions you can contact us via e-mail",
-    "Klik hier om je e-mailadres te verifieren:" : "Click here the verify your e-mail address",
+    "Klik hier om je e-mailadres te verifieren:" : "Click here the verify your e-mail address:",
     "Activeer je account" : "Activate your account",
 
     "startpagina" : "Homepage",
@@ -327,7 +327,7 @@
     "Oeps, er is iets misgegaan." : "Oops, something went wrong.",
 
     "Mijn SV \"Hello World\"" : "My SV \"Hello World\"",
-    "Mijn SV \"Hello World\" is het portaal voor alle leden van Studievereniging \"Hello World\",\n        maar ook niet-leden mogen zich aanmelden voor activiteiten via dit portaal!\n        Je moet hiervoor wel student zijn aan de opleiding HBO-ICT van de HZ University of Applied Sciences." : "My SV \"Hello World\" is the portal for all members of Study Association \"Hello World\",\n but non-members can also register for activities via this portal!\n You must be a student of the HBO-ICT degree program at the HZ University of Applied Sciences.",
+    "Mijn SV \"Hello World\" is het portaal voor alle leden van Studievereniging \"Hello World\",\nmaar ook niet-leden mogen zich aanmelden voor activiteiten via dit portaal!\nJe moet hiervoor wel student zijn aan de opleiding HBO-ICT van de HZ University of Applied Sciences." : "My SV \"Hello World\" is the portal for all members of Study Association \"Hello World\",\n but non-members can also register for activities via this portal!\n You must be a student of the HBO-ICT degree program at the HZ University of Applied Sciences.",
     "Als je nieuwe ideeën hebt voor dit portaal mag je deze indienen op" : "If you have ideas or suggestions for this portal you can submit then on",
     "onze GitHub-pagina"  : "our Github",
     "Met vriendelijke groet," : "With kind regards,",

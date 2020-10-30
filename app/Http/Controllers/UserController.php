@@ -95,6 +95,7 @@ class UserController extends Controller
             'city' => ['required', 'regex:/^([a-zA-Z\x{0080}-\x{024F}]+(?:. |-| |\'))*[a-zA-Z\x{0080}-\x{024F}]*$/u', 'max:255'],
             'account_type' => 'required',
             'activated' => 'required|boolean',
+            'shirt_size' => 'max:5',
         ]);
 
         $user = User::create($request->all());
@@ -170,6 +171,7 @@ class UserController extends Controller
             'city' => ['required', 'regex:/^([a-zA-Z\x{0080}-\x{024F}]+(?:. |-| |\'))*[a-zA-Z\x{0080}-\x{024F}]*$/u', 'max:255'],
             'account_type' => 'required',
             'activated' => 'required|boolean',
+            'shirt_size' => 'max:5',
         ]);
 
         // Extra checks if the user edits his own account
@@ -208,7 +210,7 @@ class UserController extends Controller
         // Fire 'UserCreatedOrChanged' event
         event(new UserCreatedOrChanged($user));
 
-        flash('Gebruiker bijgewerkt.', 'success');
+        flash(__('Gebruiker bijgewerkt.'), 'success');
 
         return redirect(route('user.show', $id));
     }

@@ -77,6 +77,16 @@
 
             <hr>
 
+            <div class="form-group {{ $errors->has('shirt_size') ? 'has-error' : ''}}">
+                {!! Form::label('shirt_size', __('Shirt maat'), ['class' => 'col-sm-4 control-label']) !!}
+                <div class="col-sm-8">
+                    {!! Form::select('shirt_size', ['XS' => 'XS', 'S' => 'S', 'M' => 'M', 'L' => 'L' , 'XL' => 'XL'], null, ['class' => 'form-control']) !!}
+                    {!! $errors->first('shirt_size', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
+
+            <hr>
+
             <div class="form-group {{ $errors->has('account_type') ? 'has-error' : ''}}">
                 {!! Form::label('account_type', 'Account type *', ['class' => 'col-sm-4 control-label']) !!}
                 <div class="col-sm-8">

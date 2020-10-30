@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddEmailVerifiedAtToUsersTable extends Migration
+class AddShirtSizeToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class AddEmailVerifiedAtToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('shirt_size')->nullable();
         });
     }
 
@@ -27,7 +27,7 @@ class AddEmailVerifiedAtToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('email_verified_at');
+            $table->dropColumn('shirt_size');
         });
     }
 }

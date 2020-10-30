@@ -53,10 +53,11 @@ class AccountController extends Controller
             'address' => ['required', 'regex:/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i', 'max:255'],
             'zip_code' => ['required', 'regex:/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i', 'max:7'],
             'city' => ['required', 'regex:/^([a-zA-Z\x{0080}-\x{024F}]+(?:. |-| |\'))*[a-zA-Z\x{0080}-\x{024F}]*$/u', 'max:255'],
+            'shirt_size'=> ['max:5']
         ]);
 
         $user = Auth::user();
-        $user->update($request->only('first_name', 'name_prefix', 'last_name', 'phone_number', 'address', 'zip_code', 'city'));
+        $user->update($request->only('first_name', 'name_prefix', 'last_name', 'phone_number', 'address', 'zip_code', 'city', 'shirt_size'));
 
         flash(__('Je gegevens zijn bijgewerkt!'), 'success');
 

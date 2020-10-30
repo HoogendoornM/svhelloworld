@@ -94,6 +94,7 @@ class RegisterController extends Controller
             'zip_code' => ['required', 'regex:/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i', 'max:7'],
             'city' => ['required', 'regex:/^([a-zA-Z\x{0080}-\x{024F}]+(?:. |-| |\'))*[a-zA-Z\x{0080}-\x{024F}]*$/u', 'max:255'],
             'password' => 'required|min:8|confirmed',
+            'shirt_size' => 'max:5',
         ]);
     }
 
@@ -114,6 +115,7 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'zip_code' => $data['zip_code'],
             'city' => $data['city'],
+            'shirt_size' => $data['shirt_size'],
             'password' => bcrypt($data['password']),
             'user_category_alias' => 'geen-lid',
             'contribution_category_alias' => 'lid',
