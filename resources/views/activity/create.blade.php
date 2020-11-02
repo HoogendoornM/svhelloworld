@@ -32,7 +32,7 @@
                 <div class="form-group {{ $errors->has('itp_value') ? 'has-error' : ''}}">
                     <label for="itp_value" class="control-label col-sm-2">{{ __('ITP-waarde') }}</label>
                     <div class="col-sm-6">
-                        <input type="number" step="0.01" name="itp_value" id="itp_value" value="{{ old('itp_value') }}" class="form-control">
+                        <input type="number" step="0.01" name="itp_value" id="itp_value" value=0 class="form-control">
                         {!! $errors->first('itp_value', '<p class="help-block">:message</p>') !!}
                     </div>
                 </div>

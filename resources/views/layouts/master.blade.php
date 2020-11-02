@@ -23,7 +23,6 @@
     <![endif]-->
 </head>
 <body>
-
 <!-- Top bar -->
 <div id="top-bar">
     <div class="container-fluid">
@@ -148,6 +147,7 @@
     </div>
 </header>
 
+@include('cookieConsent::index')
 
 <!-- Content -->
 <section id="content">
@@ -220,7 +220,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- Scripts -->
 <script src="{{ asset('/js/vendor.min.js') }}"></script>
