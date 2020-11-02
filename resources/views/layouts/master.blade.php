@@ -23,7 +23,6 @@
     <![endif]-->
 </head>
 <body>
-
 <!-- Top bar -->
 <div id="top-bar">
     <div class="container-fluid">
@@ -142,12 +141,13 @@
     <div id="banners">
         <div class="banner">
             <div class="banner-inner">
-                <div class="banner-photo" style="background-image: url('/images/banner.jpg');"></div>
+                <div class="banner-photo" style="background-image: url('/images/hz_middelburg.jpg');"></div>
             </div>
         </div>
     </div>
 </header>
 
+@include('cookieConsent::index')
 
 <!-- Content -->
 <section id="content">
@@ -220,7 +220,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- Scripts -->
 <script src="{{ asset('/js/vendor.min.js') }}"></script>
